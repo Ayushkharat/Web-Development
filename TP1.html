@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <h3><label for="student_name">Enter Name</label></h3>
+        <input type="text" id="student_name" name="student_name" required>
+
+        <h3><label for="age">Age in Years</label></h3>
+        <input type="number" id="age" name="age" min="1" max="120" required>
+
+        <h3><label for="email">Primary Email</label></h3>
+        <input type="email" id="email" name="email" required>
+
+        <h3><label for="password">Enter your password</label></h3>
+        <input type="password" id="password" name="password" required minlength="6">
+
+        <h3>Select payment mode</h3>
+        <input type="radio" id="cash" name="payment" value="Cash" required>
+        <label for="cash">Cash</label>
+        <input type="radio" id="cheque" name="payment" value="Cheque">
+        <label for="cheque">Cheque</label>
+        <input type="radio" id="upi" name="payment" value="UPI">
+        <label for="upi">UPI</label>
+
+        <fieldset>
+            <legend>Choose Courses</legend>
+            <input type="checkbox" id="html" name="courses" value="HTML">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="courses" value="CSS">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="js" name="courses" value="Javascript">
+            <label for="js">Javascript</label>
+        </fieldset>
+
+        <h3><label for="state">Select State</label></h3>
+        <select name="state" id="state" required>
+            <option value="">--Select--</option>
+            <option value="MH">Maharashtra</option>
+            <option value="TM">Tamil Nadu</option>
+            <option value="GJ">Gujarat</option>
+            <option value="AS">Assam</option>
+            <option value="GA">Goa</option>
+            <option value="UK">Uttarakhand</option>
+        </select>
+
+        <h3><label for="profile_pic">Choose a profile pic</label></h3>
+        <input type="file" id="profile_pic" name="profile_pic" accept="image/*" required>
+
+        <h3><label for="myrange">How would you rate our site</label></h3>
+        <input type="range" min="1" max="10" value="7" id="myrange" name="rating">
+        <h2 id="rngValue">7</h2>
+
+        <hr>
+        <input type="submit" value="Register">
+    </form>
+
+    <script>
+        var rng = document.querySelector("#myrange");
+        var rngVal = document.querySelector("#rngValue");
+
+        rng.addEventListener("input", function() {
+            rngVal.innerText = rng.value;
+        });
+    </script>
+</body>
+</html>

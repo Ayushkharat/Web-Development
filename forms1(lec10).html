@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <!-- action- on live site- the address where the data must be sent -->
+    <!-- enctype="multipart/form-data - required if you are uploading files" -->
+    <form action="#" method="post" enctype="multipart/form-data">
+        <h3> <label for="student_name">Enter Name</label></h3>
+        <input type="text" name="student_name" required>
+        <h3><label for="age">Age in Years</label></h3>
+        <input type="number" name="age" min="15" max="99">
+        <h3><label for="email">Primary Email</label></h3>
+        <input type="email" name="email">
+        <h3><label for="password">Enter your password</label></h3>
+        <input type="pw" name="password" required minlength="8" maxlength="25">
+
+        <!-- Multiple options -> sinle select - radio buttons -->
+        <h3><label for="payment">Select payment modes</label></h3>
+        <input type="radio" name="payment" value="Cash" checked>
+        <label for="payment">Cash</label>
+        <input type="radio" name="payment" value="Cheque">
+        <label for="payment">Cheque</label>
+        <input type="radio" name="payment" value="UPI">
+        <label for="payment">UPI</label>
+        <input type="radio" name="payment">
+        <!-- Many options - many select -->
+        <!-- old style of adding form border (today we USE CSS) -->
+        <fieldset>
+            <legend>Choose Courses</legend>
+            <label for="HTML">HTML</label>
+            <input type="checkbox" name="HTML" checked>
+            <label for="CSS">CSS</label>
+            <input type="checkbox" name="CSS">
+            <label for="JS">Javascript</label>
+            <input type="checkbox" name="JS">
+        </fieldset>
+        <!-- Too many options to Show on the form , but not much space(select 1) -->
+        <h3><label for="state">Select State</label></h3>
+        <select name="state">
+            <option value="MH">Maharastra</option>
+            <option value="TM">Tamil Nadu</option>
+            <option value="GJ" selected>Gujarat</option>
+            <option value="AS">Assam</option>
+            <option value="GA" disabled>Goa</option>
+            <option value="UK" hidden>Uttarakhand</option>
+        </select>
+        <h3><label for="pan">Pan Number</label></h3>
+        <input type="text" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" required placeholder="MWZPK6208B" name="pan">
+
+        <h3><label for="hobby">Choose a Hobby</label></h3>
+        <input type="text" list="hobbylist">
+        <datalist id="hobbylist">
+            <option>Cricket</option>
+            <option>Football</option>
+            <option>Basketball</option>
+            <option>Singing</option>
+            <option>Dancing</option>
+        </datalist>
+
+        <h3><label for="address">Enter the Address</label></h3>
+        <h3><label for="address">Enter the Address</label></h3>
+        <textarea name="address" rows="5" cols="30"></textarea>
+          <!-- in any input / textarea tag - you can use placeholder -->
+           <!-- Regex - Regular Expression- a lang use for matching pattern  -->
+        <h3><label for="profile_pic">Choose a profile pic</label></h3>
+        <!-- MIME Type
+<input type="file" name="profile_pic" accept="image/jpeg,image/png,image/"> -->
+        <input type="file" name="profile_pic" accept="image/*">
+        <h3><label for="rating"> How would you rate our site</label></h3>
+        <input name="rating" type="range" min="1" max="10" value="7" id="myrange">
+        <h2 id="rngValue">7</h2>
+        <hr>
+        <input type="submit" value="Register">
+    </form>
+    <script>
+        var rng = document.querySelector("#myrange");
+        var rngVal = document.querySelector("#rngValue");
+
+        rng.addEventListener("change", function (ev) {
+            rngVal.innerText = rng.value;
+
+        });
+
+    </script>
+</body>
+
+</html>

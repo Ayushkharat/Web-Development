@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    
+</body>
+<style>
+        table{
+            border-collapse: collapse;
+        }
+        td, th{
+            border: 1px  solid black;
+            padding: 5px;
+        }
+     </style>   
+     <table>
+        <caption>Products</caption>
+        <tr>
+            <th>PID</th>
+            <th>Product</th>
+            <th>MRP</th>
+            <th>Date</th>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td>Shampoo</td>
+            <td rowspan="3">No Data</td>
+            <td>09-10-2007</td>
+        </tr>
+        <tr>
+            <td>453</td>
+            <td>Oil</td>
+            <td rowspan="2">09-10-2017</td>
+        </tr>
+        <tr>
+            <td>133</td>
+            <td>Soap</td>
+        </tr>
+        <tr>
+            <td>565</td>
+            <td colspan="3">No Data</td>
+        </tr>
+        </tr>
+     </table>
+
+
+</html>

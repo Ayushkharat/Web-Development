@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 top>IFrame Demo</h1>
+    <p>Some Para </p>
+    <iframe src="https://www.wikipedia.org/" frameborder="1" height="300" width="600">
+    </iframe>
+    <p>Some Sites like Microsoft, Google block iframe</p>
+    <iframe src="https://r.search.yahoo.com/_ylt=AwrKAWd.Z39oKQIAByu7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1754389631/RO=10/RU=https%3a%2f%2fwww.microsoft.com%2fen-in/RK=2/RS=eAFMaLITlPYPBAkpeNi6q9svV8Y-" frameborder="0" height="300" width="600"></iframe> 
+    <!-- www.amazone.com -->
+    <!-- Clickjacking attacks are possible due to iframes
+     Since an iframe can have any dimensions, they can break a website layout  -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15085.241805760239!2d73.0873876445801!3d19.05008328286381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c327a8ee3533%3A0x9643f9b9881e129!2sMedicover%20Hospitals!5e0!3m2!1sen!2sin!4v1753181478304!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <iframe width="1022" height="575" src="https://www.youtube.com/embed/Ln_imebEmAQ" title="Black Clover Second Season | Official Trailer | Crunchyroll" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    <h1>Links-Anchor Tag </h1>
+    <h2>Link to another Sites</h2>
+    <a href="https://r.search.yahoo.com/_ylt=AwrKAWd.Z39oKQIAByu7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1754389631/RO=10/RU=https%3a%2f%2fwww.microsoft.com%2fen-in/RK=2/RS=eAFMaLITlPYPBAkpeNi6q9svV8Y-" >Go to Microsoft Official Page</a>
+    <h3>Link to another Sites - new TAb</h3>
+    <a href="https://r.search.yahoo.com/_ylt=AwrKAWd.Z39oKQIAByu7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1754389631/RO=10/RU=https%3a%2f%2fwww.microsoft.com%2fen-in/RK=2/RS=eAFMaLITlPYPBAkpeNi6q9svV8Y-" target="_blank">Go to Microsoft Official Page</a>
+    <h3>Send an Email</h3>
+    <a href="mailto:ayushkharat2022@gmail.com">Mail Me</a>
+    <br/>
+    <a href="mailto:ayushkharat2022@gmail.com?subject=Test Mail&cc=ayu.kha.rt22@dypatil.edu&bcc=omvlkharat@gmail.com&body=This is a Test Mail">Mail Me</a>
+    <a href="tel:+919820841526">Ayush Kharat</a>
+
+    <!-- CSS FOR SMOOTHING -->
+    <style>
+        html{scroll-behavior: smooth;}
+    </style>
+    <h3>Navigate on Page</h3>
+    <a href="#top">Back To Top Page</a>
+    <h3>Open a link in an iframe</h3>
+    <a href="https://www.wikipedia.org/" target="wikiframe">Open wikipedia in Iframe</a>
+    <hr>
+    <iframe src="" frameborder="1" height="400" width="800" name="wikiframe"></iframe>
+
+</body>
+</html>
